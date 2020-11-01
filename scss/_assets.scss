@@ -1,0 +1,44 @@
+// Colors
+$COLOR_WHITE: #fff;
+$COLOR_BLACK: #000;
+$COLOR_ORANGE: #e0604e;
+$COLOR_GREY: lightgrey;
+
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif:wght@100;400;700&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+$font_primary: "Noto Serif", serif;
+$font_secondary: "Roboto", sans-serif;
+
+// Box Mixin
+@mixin box($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+//Responsive Mixin
+@mixin breakpoint($class) {
+  @if $class == xs {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $class == sm {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $class == md {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $class == lg {
+    @media (min-width: 1200px) and (max-width: 1799px) {
+      @content;
+    }
+  } @else if $class == xl {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  } 
+  @else {
+    @warn "Breakpoint mixin supports: xs, sm, md, lg, xl";
+  }
+}

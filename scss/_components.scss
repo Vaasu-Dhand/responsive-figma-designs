@@ -1,0 +1,16 @@
+// Link
+@mixin link {
+  cursor: pointer;
+  font-weight: 500;
+  padding-right: 5px;
+}
+
+// Button
+@mixin button {
+  border-radius: 5px;
+  border: none;
+  flex: 1;
+  font-size: medium;
+  font-family: $font_secondary;
+  cursor: pointer;
+}

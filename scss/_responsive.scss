@@ -1,0 +1,73 @@
+@import "assets";
+
+@include breakpoint(xs) {
+  main {
+    background-color: khaki;
+  }
+}
+@include breakpoint(sm) {
+  div.wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    
+  }
+
+  main {
+    background-color: red;
+  }
+
+  section {
+    border: 5px solid goldenrod;
+  }
+}
+@include breakpoint(md) {
+  main {
+    background-color: white;
+
+    nav {
+      flex-direction: column;
+
+      .logo {
+        align-self: center;
+      }
+      .arrow-svg {
+        visibility: hidden;
+      }
+      .nav-items {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+    .content {
+      justify-content: center;
+      h1 {
+        font-size: 35px;
+      }
+      .text-greyed {
+        font-weight: 400;
+        line-height: 2rem;
+        letter-spacing: .4px;
+      }
+    }
+  }
+}
+@include breakpoint(lg) {
+  main {
+    background-color: violet;
+
+    .content {
+      h1 {
+        font-size: 43px;
+      }
+      .text-greyed {
+        font-size: 19px;
+      }
+    }
+  }
+}
+@include breakpoint(xl) {
+  main {
+    background-color: green;
+  }
+}
